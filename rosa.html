@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensaje para mi novia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffe4ec, #fff0f6);
+      font-family: 'Dancing Script', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #a10045;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    /* Corazones flotantes */
+    .corazon {
+      position: absolute;
+      font-size: 24px;
+      color: rgba(255, 0, 76, 0.3);
+      animation: flotar 10s linear infinite;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(100vh) scale(1); opacity: 0.3; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Imagen responsive */
+    img {
+      width: 90%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(161, 0, 69, 0.4);
+      margin-bottom: 20px;
+      animation: flotarSuave 3s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes flotarSuave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Texto responsive */
+    .texto {
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      font-style: italic;
+      font-weight: 500;
+      max-width: 90vw;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(161, 0, 69, 0.2);
+      backdrop-filter: blur(5px);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Adaptación para TV y pantallas grandes */
+    @media (min-width: 1200px) {
+      .texto { max-width: 60vw; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Corazones flotando -->
+  <span class="corazon" style="left: 10%; animation-delay: 0s;">❤️</span>
+  <span class="corazon" style="left: 25%; animation-delay: 2s;">💖</span>
+  <span class="corazon" style="left: 40%; animation-delay: 4s;">💗</span>
+  <span class="corazon" style="left: 55%; animation-delay: 1s;">💓</span>
+  <span class="corazon" style="left: 70%; animation-delay: 3s;">💘</span>
+  <span class="corazon" style="left: 85%; animation-delay: 5s;">💕</span>
+
+  <!-- Imagen -->
+  <img src="The Bachelor Flowers GIF by qgfloral.gif" alt="Rosa animada" />
+
+  <!-- Texto -->
+  <div class="texto">
+    No te las puedo dar en persona,<br />
+    pero sí te las puedo hacer como cuando te conquisté.<br />
+    ❤️ Te amo ❤️
+  </div>
+</body>
+</html>
